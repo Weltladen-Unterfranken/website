@@ -1,0 +1,382 @@
+[
+  {
+    "id": 1,
+    "name": "Weltladen Alzenau",
+    "street": "Friedberger Gässchen 5",
+    "zip": "63755",
+    "city": "Alzenau",
+    "web": "www.weltladen-alzenau.de",
+    "lat": 50.0865732,
+    "lon": 9.0742971
+  },
+  {
+    "id": 2,
+    "name": "Weltladen Aschaffenburg",
+    "street": "Treibgasse 3",
+    "zip": "63739",
+    "city": "Aschaffenburg",
+    "web": "www.weltladen-aschaffenburg.de",
+    "lat": 49.9756998,
+    "lon": 9.1466896
+  },
+  {
+    "id": 3,
+    "name": "Weltladen Bad Brückenau",
+    "street": "Ludwigstraße 48",
+    "zip": "97769",
+    "city": "Bad Brückenau",
+    "web": "www.weltladen-bad-brueckenau.de",
+    "lat": 50.3095387,
+    "lon": 9.7880232
+  },
+  {
+    "id": 4,
+    "name": "Weltladen Bad Kissingen",
+    "street": "Prinzregenten Str. 2",
+    "zip": "97688",
+    "city": "Bad Kissingen",
+    "web": "www.weltladen-bad-kissingen.de",
+    "lat": 50.199049,
+    "lon": 10.0776596
+  },
+  {
+    "id": 5,
+    "name": "Weltladen Bad Mergentheim",
+    "street": "Zaisenmühlstr. 3",
+    "zip": "97980",
+    "city": "Bad Mergentheim",
+    "web": "",
+    "lat": 49.4930919,
+    "lon": 9.7705856
+  },
+  {
+    "id": 6,
+    "name": "Weltladen Bad Neustadt",
+    "street": "Hohnstraße 34",
+    "zip": "97616",
+    "city": "Bad Neustadt",
+    "web": "www.fairhandeln.de",
+    "lat": 50.3204968,
+    "lon": 10.2132015
+  },
+  {
+    "id": 7,
+    "name": "Weltladen Ebern",
+    "street": "Kapellenstraße 32",
+    "zip": "96106",
+    "city": "Ebern",
+    "web": "www.weltladen.de/ebern",
+    "lat": 50.095906,
+    "lon": 10.7941649
+  },
+  {
+    "id": 8,
+    "name": "Weltladen Eltmann",
+    "street": "Marktplatz 9",
+    "zip": "97483",
+    "city": "Eltmann",
+    "web": "www.kolping-eltmann.de/kolping-eltmann/weltladen",
+    "lat": 49.9717964,
+    "lon": 10.66628418274043
+  },
+  {
+    "id": 9,
+    "name": "Eine Welt Laden Erlabrunn",
+    "street": "Würzburger Straße 36",
+    "zip": "97250",
+    "city": "Erlabrunn",
+    "web": "",
+    "lat": 49.8579002,
+    "lon": 9.8454734
+  },
+  {
+    "id": 10,
+    "name": "Eine-Welt-Laden Erlenbach",
+    "street": "Bahnstraße 9a",
+    "zip": "63906",
+    "city": "Erlenbach",
+    "web": "www.weltladen-erlenbach.de",
+    "lat": 49.8023901,
+    "lon": 9.1602865
+  },
+  {
+    "id": 11,
+    "name": "Weltladen Esperanza",
+    "street": "Obertorstraße 32",
+    "zip": "97737",
+    "city": "Gemünden",
+    "web": "",
+    "lat": 50.0547904,
+    "lon": 9.6923571
+  },
+  {
+    "id": 12,
+    "name": "Eine-Welt-Laden Gerolzhofen",
+    "street": "Weiße-Turm-Str. 2",
+    "zip": "97447",
+    "city": "Gerolzhofen",
+    "web": "www.weltladen-geo.de",
+    "lat": 49.900848100000005,
+    "lon": 10.349877894364244
+  },
+  {
+    "id": 13,
+    "name": "Weltladen Güntersleben",
+    "street": "Rimparer Straße 9",
+    "zip": "97261",
+    "city": "Güntersleben",
+    "web": "www.weltladen-guentersleben.de",
+    "lat": 49.8689571,
+    "lon": 9.9061572
+  },
+  {
+    "id": 14,
+    "name": "Weltladen Hammelburg",
+    "street": "Bahnhofstraße 3",
+    "zip": "97762",
+    "city": "Hammelburg",
+    "web": "www.weltladenhammelburg.de",
+    "lat": 50.1158105,
+    "lon": 9.8895619
+  },
+  {
+    "id": 15,
+    "name": "Welt-Laden Haßfurt",
+    "street": "Lucengasse 4",
+    "zip": "97437",
+    "city": "Haßfurt",
+    "web": "www.weltladen-hassfurt.de",
+    "lat": 50.0322488,
+    "lon": 10.5072936
+  },
+  {
+    "id": 16,
+    "name": "Eine-Welt-Laden bosembo",
+    "street": "Würzburgerstr. (Milchhäusle)",
+    "zip": "97265",
+    "city": "Hettstadt",
+    "web": "www.bosembo-hettstadt.de",
+    "lat": 49.80142322536323,
+    "lon": 9.81417915472021
+  },
+  {
+    "id": 17,
+    "name": "Kolpingladen Hösbach",
+    "street": "Hauptstraße 79",
+    "zip": "63768",
+    "city": "Hösbach",
+    "web": "",
+    "lat": 50.003071899999995,
+    "lon": 9.201126513810966
+  },
+  {
+    "id": 18,
+    "name": "Weltladen Karlstadt",
+    "street": "Alte Bahnhofstrasse 13",
+    "zip": "97753",
+    "city": "Karlstadt",
+    "web": "www.weltladen-karlstadt.de",
+    "lat": 49.96152295,
+    "lon": 9.76663593917683
+  },
+  {
+    "id": 19,
+    "name": "Weltladen Karlstein",
+    "street": "Schulstrasse 21",
+    "zip": "63791",
+    "city": "Karlstein",
+    "web": "www.weltladen-karlstein.de",
+    "lat": 50.0445567,
+    "lon": 9.0311761
+  },
+  {
+    "id": 20,
+    "name": "Weltladen Kitzingen",
+    "street": "Obere Kirchgasse 14",
+    "zip": "97318",
+    "city": "Kitzingen",
+    "web": "",
+    "lat": 49.7385397,
+    "lon": 10.1627477
+  },
+  {
+    "id": 21,
+    "name": "EINE-Weltladen Kleinostheim",
+    "street": "Kirchplatz 2",
+    "zip": "63801",
+    "city": "Kleinostheim",
+    "web": "www.sankt-laurentius-kleinostheim.de",
+    "lat": 50.002635850000004,
+    "lon": 9.064188837812956
+  },
+  {
+    "id": 22,
+    "name": "Eine-Welt-Laden Kleinwallstadt",
+    "street": "Kirchgasse 19",
+    "zip": "63839",
+    "city": "Kleinwallstadt",
+    "web": "",
+    "lat": 49.8715813,
+    "lon": 9.1649392
+  },
+  {
+    "id": 23,
+    "name": "Eine-Welt-Laden Klingenberg",
+    "street": "Gartenstraße 23",
+    "zip": "63911",
+    "city": "Klingenberg",
+    "web": "",
+    "lat": 49.764376861807456,
+    "lon": 9.18869151686104
+  },
+  {
+    "id": 24,
+    "name": "Weltladen Pamoja",
+    "street": "Hauptstraße 24",
+    "zip": "97816",
+    "city": "Lohr",
+    "web": "www.weltladen-pamoja-lohr.jimdo.com",
+    "lat": 49.9947113,
+    "lon": 9.5747378
+  },
+  {
+    "id": 25,
+    "name": "Weltladen Marktheidenfeld",
+    "street": "Luitpoldstrasse 35 b",
+    "zip": "97828",
+    "city": "Marktheidenfeld",
+    "web": "www.weltladen-marktheidenfeld.de",
+    "lat": 49.847694,
+    "lon": 9.6004393
+  },
+  {
+    "id": 26,
+    "name": "Weltladen Miltenberg",
+    "street": "Ziegelgasse 6",
+    "zip": "63879",
+    "city": "Miltenberg",
+    "web": "www.weltladen.de/miltenberg",
+    "lat": 49.7014218,
+    "lon": 9.2568086
+  },
+  {
+    "id": 27,
+    "name": "Eine-Welt-Laden der KJG MömlingenBachstraße 32",
+    "street": "",
+    "zip": "63853",
+    "city": "Mömlingen",
+    "web": "www.weltladen-moemlingen.de",
+    "lat": 49.8583309,
+    "lon": 9.0842372
+  },
+  {
+    "id": 28,
+    "name": "Weltladen Ochsenfurt",
+    "street": "Brückenstraße 1",
+    "zip": "97199",
+    "city": "Ochsenfurt",
+    "web": "",
+    "lat": 49.6649639,
+    "lon": 10.0632616
+  },
+  {
+    "id": 29,
+    "name": "Weltkreis-Laden Randersacker",
+    "street": "Maingasse 9",
+    "zip": "97236",
+    "city": "Randersacker",
+    "web": "www.weltladen-randersacker.de",
+    "lat": 49.7594174,
+    "lon": 9.9803577
+  },
+  {
+    "id": 30,
+    "name": "Karibuni - Eine Welt Laden",
+    "street": "Bahnhofstraße 5a",
+    "zip": "97234",
+    "city": "Reichenberg",
+    "web": "www.karibuni-reichenberg.de",
+    "lat": 49.7310549,
+    "lon": 9.9158509
+  },
+  {
+    "id": 31,
+    "name": "Weltladen der Pfarrei Retzbach",
+    "street": "Kirchgasse 9 (Alte Schule)",
+    "zip": "97225",
+    "city": "Retzbach/Zellingen",
+    "web": "www.weltladen.de/retzbach",
+    "lat": 49.9036345166019,
+    "lon": 9.823289031550829
+  },
+  {
+    "id": 32,
+    "name": "Eine-Welt-Laden Schöllkrippen",
+    "street": "Waagstraße 21",
+    "zip": "63825",
+    "city": "Schöllkrippen",
+    "web": "www.weltladen-schoellkrippen.de",
+    "lat": 50.08706385,
+    "lon": 9.242830708816836
+  },
+  {
+    "id": 33,
+    "name": "Weltladen Schweinfurt",
+    "street": "Wolfsgasse 28",
+    "zip": "97421",
+    "city": "Schweinfurt",
+    "web": "weltlaeden.de/schweinfurt/",
+    "lat": 50.0452566,
+    "lon": 10.2288869
+  },
+  {
+    "id": 34,
+    "name": "Welt-Laden Sulzbach",
+    "street": "Jahnstraße 3",
+    "zip": "63834",
+    "city": "Sulzbach",
+    "web": "www.pg-sulzbach.de/eine-welt/",
+    "lat": 49.9092188,
+    "lon": 9.1565844
+  },
+  {
+    "id": 35,
+    "name": "Welt Laden Volkach",
+    "street": "Spitalstrasse 21",
+    "zip": "97332",
+    "city": "Volkach",
+    "web": "weltlaeden.de/volkach/",
+    "lat": 49.86568,
+    "lon": 10.228136379632721
+  },
+  {
+    "id": 36,
+    "name": "Eine-Welt-Laden",
+    "street": "Seeweg 5",
+    "zip": "97297",
+    "city": "Waldbüttelbrunn",
+    "web": "",
+    "lat": 49.786162700000006,
+    "lon": 9.842499497173023
+  },
+  {
+    "id": 37,
+    "name": "Weltladen Wiesentheid",
+    "street": "Bahnhofstraße 9",
+    "zip": "97353",
+    "city": "Wiesentheid",
+    "web": "",
+    "lat": 49.7907929,
+    "lon": 10.3409933
+  },
+  {
+    "id": 38,
+    "name": "Weltladen Würzburg",
+    "street": "Plattnerstraße 14",
+    "zip": "97070",
+    "city": "Würzburg",
+    "web": "www.weltladen-wuerzburg.de",
+    "lat": 49.7925244,
+    "lon": 9.9310703
+  }
+]

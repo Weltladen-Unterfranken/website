@@ -1,38 +1,61 @@
 <template>
-  <div class="flex flex-col-reverse md:flex-row search-container space-x-4">
-    <div class="list-container flex-1 flex flex-col">
+  <div class="search-container flex flex-col-reverse md:flex-row md:max-h-screen py-4 md:space-x-4">
+    <div class="list-container flex-1 flex flex-col mt-4 md:mt-0">
       <input v-model="searchTerm"
              type="text"
              class="mb-2 px-4 py-2 text-gray-800"
              placeholder="Suche nach Stadt oder PLZ"
       >
-      <ul class="space-y-2 max-h-full overflow-y-scroll">
+
+      <ul class="space-y-2 h-64 md:h-full md:max-h-full overflow-y-scroll">
         <li v-for="r in filteredResults"
             class="bg-white cursor-pointer px-4 py-2 text-gray-800 text-xl"
-            @click="selectedEntry = r.id"
+            @click="openResult(r.id)"
+            :class="{'active': r.id === selectedEntryId}"
         >
           <span>{{r.name}}</span>
         </li>
       </ul>
     </div>
-    <div class="map-container flex-1" v-if="!selectedEntry">
-      <l-map ref="map" :center="map.center" :zoom="map.zoom" :options="{gestureHandling: true}">
+    <div class="map-container flex-1">
+      <l-map ref="map" :center="map.center" :zoom="map.zoom" :options="{gestureHandling: true}" v-if="!selectedEntry">
         <l-tile-layer :url="map.url" :attribution="map.attribution"></l-tile-layer>
+        <l-marker
+                v-for="r in filteredResults"
+                :key="r.id"
+                :icon="r.id === selectedEntry ? map.markerRed: map.markerBlue"
+                :lat-lng="[r.lat, r.lon]"
+                @click="openResult(r.id)">
+          <l-tooltip :content="r.name"></l-tooltip>
+        </l-marker>
       </l-map>
-    </div>
-    <div class="info-container flex-1" v-else>
-      <article class="bg-white p-8 relative">
-        <i class="close-icon cursor-pointer" @click="selectedEntry=null">
-          <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 371.23 371.23" style="enable-background:new 0 0 371.23 371.23;" xml:space="preserve">
-              <polygon points="371.23,21.213 350.018,0 185.615,164.402 21.213,0 0,21.213 164.402,185.615 0,350.018 21.213,371.23 185.615,206.828 350.018,371.23 371.23,350.018 206.828,185.615 "/>
+      <div class="relative bg-white p-8" v-else>
+        <icon class="absolute close-icon cursor-pointer" @click="closeResult()">
+          <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+               viewBox="0 0 371.23 371.23" style="enable-background:new 0 0 371.23 371.23;" xml:space="preserve">
+                <polygon points="371.23,21.213 350.018,0 185.615,164.402 21.213,0 0,21.213 164.402,185.615 0,350.018 21.213,371.23
+	                185.615,206.828 350.018,371.23 371.23,350.018 206.828,185.615 "/>
           </svg>
-        </i>
-      </article>
+        </icon>
+        <div class="text-xl text-gray-800">
+          <h2>{{selectedEntry.name}}</h2>
+          <br />
+          {{selectedEntry.street}}<br/>
+          {{selectedEntry.zip}} {{selectedEntry.city}}<br/>
+          <span v-if="selectedEntry.web"><a target="_blank" rel="noopener" :href="'http://'+selectedEntry.web">{{selectedEntry.web}}</a></span>
+        </div>
+      </div>
     </div>
   </div>
 </template>
 
 <script>
+  import list from "../assets/data";
+  import L from 'leaflet';
+  import { GestureHandling } from 'leaflet-gesture-handling';
+
+  L.Map.addInitHook('addHandler', 'gestureHandling', GestureHandling);
+
 export default {
   name: 'SearchComponent',
   data() {
@@ -42,22 +65,56 @@ export default {
         attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors',
         zoom: 9,
         center: [49.9000, 9.7000],
+        markerBlue: L.icon({
+          iconUrl: require('../assets/images/marker-icon.png'),
+          iconSize: [25, 41]
+        }),
+        markerRed: L.icon({
+          iconUrl: require('../assets/images/marker-icon-red.png'),
+          iconSize: [25, 41]
+        })
       },
+      data: list,
       searchTerm: '',
-      selectedEntry: null
+      selectedEntryId: null
     }
+  },
+  created() {
+    this.$nextTick(() =>  this.$refs.map.fitBounds(this.mapBounds))
   },
   computed: {
     filteredResults() {
-      const q = this.searchTerm;
-      return new Array(20).fill({
-        id: 1,
-        name: 'Weltladen Alzenau',
-        street: 'Friedberger Gässchen 5',
-        zip: '63755',
-        city: 'Alzenau',
-        web: 'www.weltladen-alzenau.de'
-      }).filter((entry) => entry.name.includes(q) || entry.zip.includes(q) || entry.city.includes(q));
+      const q = this.searchTerm.toLowerCase();
+      return this.data.filter((entry) => entry.name.toLowerCase().includes(q)
+              || entry.zip.includes(q)
+              || entry.city.toLowerCase().includes(q));
+    },
+    mapBounds() {
+      return L.latLngBounds(this.filteredResults.map((e) => [e.lat, e.lon]))
+    },
+    selectedEntry() {
+      if(!this.selectedEntryId){
+        return null;
+      }
+      return this.data.find((e) => e.id === this.selectedEntryId);
+    }
+  },
+  methods: {
+    openResult(id) {
+      this.selectedEntryId = id;
+    },
+    closeResult() {
+      this.selectedEntryId = null;
+    }
+  },
+  watch: {
+    filteredResults(val) {
+        this.$refs.map.fitBounds(this.mapBounds)
+    },
+    searchTerm(newVal, oldVal) {
+      if(newVal === '' && oldVal !== '') {
+        this.$refs.map.fitBounds(this.mapBounds)
+      }
     }
   }
 }
@@ -70,7 +127,7 @@ export default {
   }
   .search-container {
     width: 100%;
-    max-height: 90vh;
+    max-height: 960px;
   }
   .search-container > div {
   }
@@ -84,6 +141,10 @@ export default {
     border: 1px solid #333;
     border-radius: 100%;
     padding: 8px;
-
   }
+
+  .active {
+    background-color: rgba(255,255,255,0.5)
+  }
+
 </style>

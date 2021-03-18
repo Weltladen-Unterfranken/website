@@ -9,6 +9,7 @@
   "dependencies": {
     "core-js": "^3.9.1",
     "leaflet": "^1.7.1",
+    "leaflet-gesture-handling": "^1.2.1",
     "vue": "^2.6.12",
     "vue2-leaflet": "^2.6.0"
   },
