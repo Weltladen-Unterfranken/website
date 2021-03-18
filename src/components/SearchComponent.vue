@@ -42,7 +42,7 @@
           <br />
           {{selectedEntry.street}}<br/>
           {{selectedEntry.zip}} {{selectedEntry.city}}<br/>
-          <span v-if="selectedEntry.web"><a target="_blank" rel="noopener" :href="'http://'+selectedEntry.web">{{selectedEntry.web}}</a></span>
+          <span v-if="selectedEntry.web"><a class="underline" target="_blank" rel="noopener" :href="'http://'+selectedEntry.web">{{selectedEntry.web}}</a></span>
         </div>
       </div>
     </div>

@@ -18,17 +18,12 @@
 body {
   color: white;
   font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif;
+  background-color: #f29901;
 }
 
 h1, h2, footer {
   font-family: "DCC - Ash";
 }
-
-
-body {
-  background-color: #f29901;
-}
-
 
 .vue2leaflet-map {
   min-height:50vh;
