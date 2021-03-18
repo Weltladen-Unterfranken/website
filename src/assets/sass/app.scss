@@ -1,0 +1,30 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+@font-face {
+  font-family: 'DCC - Ash';
+  src: url('../fonts/DCC-Ash.eot');
+  src: url('../fonts/DCC-Ash.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/DCC-Ash.woff2') format('woff2'),
+  url('../fonts/DCC-Ash.woff') format('woff'),
+  url('../fonts/DCC-Ash.ttf') format('truetype'),
+  url('../fonts/DCC-Ash.svg#DCC-Ash') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+body {
+  color: white;
+  font-family: 'Arial', 'Helvetica', 'DejaVu Sans', sans-serif;
+}
+
+h1, h2, footer {
+  font-family: "DCC - Ash";
+}
+
+
+body {
+  background-color: #f29901;
+}
