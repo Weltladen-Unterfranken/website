@@ -3,7 +3,7 @@
 @import "tailwindcss/utilities";
 
 @font-face {
-  font-family: "DCC - Ash";
+  font-family: "DCC-Ash";
   src: url('../fonts/DCC-Ash.eot');
   src: url('../fonts/DCC-Ash.eot?#iefix') format('embedded-opentype'),
   url('../fonts/DCC-Ash.woff2') format('woff2'),
@@ -22,7 +22,7 @@ body {
 }
 
 h1, h2, footer {
-  font-family: "DCC - Ash";
+  font-family: "DCC-Ash";
 }
 
 .vue2leaflet-map {

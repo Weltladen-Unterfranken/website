@@ -80,17 +80,20 @@ export default {
     }
   },
   created() {
-    this.$nextTick(() =>  this.$refs.map.fitBounds(this.mapBounds))
+    this.$nextTick(() =>  this.fitMap())
   },
   computed: {
     filteredResults() {
       const q = this.searchTerm.toLowerCase();
+      const d = q.match(/\d+/);
+      const digits = d ? d[0].substr(0,3) : null;
       return this.data.filter((entry) => entry.name.toLowerCase().includes(q)
-              || entry.zip.includes(q)
+              || entry.zip.startsWith(digits)
               || entry.city.toLowerCase().includes(q));
     },
     mapBounds() {
-      return L.latLngBounds(this.filteredResults.map((e) => [e.lat, e.lon]))
+      const bounds = this.filteredResults.map((e) => [e.lat, e.lon]);
+      return bounds.length ? L.latLngBounds(bounds) : null;
     },
     selectedEntry() {
       if(!this.selectedEntryId){
@@ -105,15 +108,20 @@ export default {
     },
     closeResult() {
       this.selectedEntryId = null;
+    },
+    fitMap(){
+      if(this.mapBounds){
+        this.$refs.map.fitBounds(this.mapBounds)
+      }
     }
   },
   watch: {
-    filteredResults(val) {
-        this.$refs.map.fitBounds(this.mapBounds)
+    filteredResults() {
+      this.fitMap()
     },
     searchTerm(newVal, oldVal) {
       if(newVal === '' && oldVal !== '') {
-        this.$refs.map.fitBounds(this.mapBounds)
+        this.fitMap()
       }
     }
   }
