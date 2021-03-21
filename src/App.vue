@@ -1,6 +1,6 @@
 <template>
   <div class="container mx-auto p-4">
-    <h1 class="text-6xl uppercase">Die Unter&shy;fränkischen Weltläden</h1>
+    <h1 class="text-6xl uppercase main-heading">Die Unter&shy;fränkischen Weltläden</h1>
     <p class="text-xl">... sind Fachgeschäfte des Fairen Handels<br />
       ... treten ein für umweltschonende und menschewürdige Produktionsweisen<br />
       ... machen auf Ungerechtigkeiten im Welthandel aufmerksam und zeigen, dass ein anderes Wirtschaften möglich ist
@@ -28,6 +28,10 @@ export default {
 </script>
 
 <style lang="scss">
+  h1.main-heading {
+    letter-spacing: 2.2px;
+    font-size: 4.5rem;
+  }
 .container {
   max-width: 960px !important;
 }
