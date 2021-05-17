@@ -1,6 +1,6 @@
 <template>
   <div class="container mx-auto p-4">
-    <h1 class="text-6xl uppercase main-heading">Die Unter&shy;fränkischen Weltläden</h1>
+    <h1 class="text-6xl uppercase main-heading text-center">Die Unter&shy;fränkischen Weltläden</h1>
     <p class="text-xl">... sind Fachgeschäfte des Fairen Handels<br />
       ... treten ein für umweltschonende und menschewürdige Produktionsweisen<br />
       ... machen auf Ungerechtigkeiten im Welthandel aufmerksam und zeigen, dass ein anderes Wirtschaften möglich ist
@@ -10,8 +10,7 @@
     <search-component></search-component>
 
     <footer class="mt-8 flex flex-row justify-center space-x-6 text-xl">
-      <a  href="#">Impressum</a>
-      <a  href="#">Datenschutzerklärung</a>
+      <a  href="https://www.weltladen-aschaffenburg.de/impressum-datenschutz" target="_blank">Impressum & Datenschutz</a>
     </footer>
   </div>
 </template>
@@ -33,6 +32,6 @@ export default {
     font-size: 4.5rem;
   }
 .container {
-  max-width: 960px !important;
+  max-width: 1400px !important;
 }
 </style>

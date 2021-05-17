@@ -30,19 +30,36 @@
         </l-marker>
       </l-map>
       <div class="relative bg-white p-8" v-else>
-        <icon class="absolute close-icon cursor-pointer" @click="closeResult()">
+        <i class="absolute close-icon cursor-pointer" @click="closeResult()">
           <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                viewBox="0 0 371.23 371.23" style="enable-background:new 0 0 371.23 371.23;" xml:space="preserve">
                 <polygon points="371.23,21.213 350.018,0 185.615,164.402 21.213,0 0,21.213 164.402,185.615 0,350.018 21.213,371.23
 	                185.615,206.828 350.018,371.23 371.23,350.018 206.828,185.615 "/>
           </svg>
-        </icon>
+        </i>
         <div class="text-xl text-gray-800">
           <h2>{{selectedEntry.name}}</h2>
           <br />
-          {{selectedEntry.street}}<br/>
-          {{selectedEntry.zip}} {{selectedEntry.city}}<br/>
-          <span v-if="selectedEntry.web"><a class="underline" target="_blank" rel="noopener" :href="'http://'+selectedEntry.web">{{selectedEntry.web}}</a></span>
+          <div class="flex">
+            <div v-if="hasLogo(selectedEntry)"
+                 class="mr-4"
+            >
+              <img :src="getLogo(selectedEntry)"
+                   class="max-w-200"
+              />
+            </div>
+            <div>
+            {{selectedEntry.street}}<br/>
+            {{selectedEntry.zip}} {{selectedEntry.city}}<br/>
+            <span v-if="selectedEntry.web"><a class="underline" target="_blank" rel="noopener" :href="'//'+selectedEntry.web">{{selectedEntry.web}}</a></span>
+            </div>
+          </div>
+          <div class="flex gap-4 mt-8" v-if="hasPhotos(selectedEntry)">
+            <img v-for="photo in getPhotos(selectedEntry)"
+                 :src="photo"
+                 class="max-h-300"
+            />
+          </div>
         </div>
       </div>
     </div>
@@ -113,6 +130,18 @@ export default {
       if(this.mapBounds){
         this.$refs.map.fitBounds(this.mapBounds)
       }
+    },
+    hasLogo(entry) {
+      return !!entry.logo;
+    },
+    getLogo(entry) {
+      return '/assets/logos/' + entry.logo;
+    },
+    hasPhotos(entry) {
+      return !!entry.photo;
+    },
+    getPhotos(entry) {
+      return entry.photo.split('|').map((src) => '/assets/photos/' + src);
     }
   },
   watch: {
@@ -153,6 +182,14 @@ export default {
 
   .active {
     background-color: rgba(255,255,255,0.5)
+  }
+
+  .max-h-300 {
+    max-height: 300px;
+  }
+
+  .max-w-200 {
+    max-width: 200px;
   }
 
 </style>
