@@ -502,5 +502,19 @@
     "photo": "",
     "lat": 49.7925244,
     "lon": 9.9310703
+  },
+  {
+    "id": 37,
+    "name": "Weltladen Rimpar",
+    "street": "Niederhofer Str. 9",
+    "zip": "97222",
+    "city": "Rimpar",
+    "web": "https://www.weltladen-rimpar.de/",
+    "facebook": "https://www.facebook.com/Weltladen-Rimpar-eV-106288114732672/",
+    "instagram": "",
+    "logo": "",
+    "photo": "",
+    "lat": 49.85639591761112,
+    "lon": 9.956873298363162
   }
 ]
